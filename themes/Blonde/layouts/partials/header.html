@@ -1,0 +1,71 @@
+{{/*  <div class="bg-gray-800">
+    <div class="container mr-auto ml-auto">
+        <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+            <div class="flex items-center flex-no-shrink bg-gray-800 text-white mr-6">
+                <a href="{{ .Site.BaseURL }}"><span class="font-semibold text-2xl tracking-tight">{{ .Site.Title }}</span></a>
+            </div>
+            <div class="block sm:hidden">
+                <button id="hamburgerbtn"
+                    class="flex items-center px-3 py-2 border rounded text-gray-300 border-gray-200 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden w-full md:flex md:flex-row sm:items-center sm:w-auto" id="mobileMenu">
+                <div class="text-sm lg:flex-grow">
+                </div>
+                <div>
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}"
+                        class="no-underline block mt-4 sm:inline-block sm:mt-0 text-gray-400 hover:text-white mr-4">
+                        {{ .Name }}
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>  */}}
+
+{{/*Centered vertical style*/}}
+
+<!--<div class="header w-full bg-cover bg-center" style="background-image: url(https://limityjsmemy.cz/wp-content/uploads/2017/06/Jezer%CC%8Ci%CC%81-a-lom-C%CC%8CSA.jpg);">
+    <div class="flex flex-col items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+        <img class="mt-4 mb-4" src="/images/logo.svg">
+        <div class="text-center">
+            <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl">Build Your new <span class="underline text-blue-400">Saas</span></h1>
+            <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Start project</button>
+        </div>
+    </div>
+</div>-->
+
+<div class="header min-h-64 bg-cover" style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('/uploads/dither_it_zewlakk.png'); background-size: cover; background-position: center center;">
+    {{- partial "topbar.html" . -}}
+    <div class="container md:h-52 mx-auto pl-5 pr-5 max-w-screen-xl flex flex-col md:flex-row justify-between">
+        <div class="logo-wrapper h-full flex flex-col justify-center">
+            <img class="mt-4 mb-4 h-28" style=""
+                                        alt="Logo Limity jsme My" src="/images/logo.svg"></div>
+        <div class="mt-4 mb-4 text-center md:text-left flex flex-col flex-wrap md:items-end items-center">
+            <p class="ml-2 mr-2 max-w-sm text-white font-bold">Jsme hnutí usilující o ukončení těžby a spalování fosilních paliv. Naším cílem je klimatická spravedlnost.</p>
+            <div class="mx-auto md:mx-0 flex flex-wrap justify-around mt-8 font-bold content-between">
+                <a class="text-xl bg-gray-600 text-gray-100 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900"
+                   href="#">Přidej se k nám</a>
+                <a class="text-xl bg-gray-500 text-gray-200 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800"
+                   href="#">Chci vědět víc</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/*  <script>
+    let hamburger = document.getElementById('hamburgerbtn');
+
+    let mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+    });
+</script>  */}}

@@ -1,0 +1,26 @@
+<h1>CSS only priority navigation</h1>
+<p>Resize this window and watch the navigation adapt to available space. <strong>No JS</strong>. <strong>Only CSS</strong>. A pen by <a href="https://codepen.io/olach">Ola</a>.</p>
+
+<nav id="menu">
+	<ul id="menu-closed">
+		<li><a href="#">Start</a></li>
+		<li><a href="#">Events</a></li>
+		<li><a href="#">Calendar</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Products</a></li>
+		<li><a href="#">Things</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Login</a></li>
+		<li><a href="#menu-closed">&#215; Close menu</a></li>
+		<li><a href="#menu">&#9776; Menu</a></li>
+	</ul>
+</nav>
+
+<p>A quick note on how this works. Nothing special is used, only inline-blocks, absolute positioning, max-height and overflow hidden. Therefore, this technique should work in all browsers.</p>
+<p>The menu button is the last menu item. This item is placed above the navigation, and is hidden because the nav has overflow hidden applied. The rest of the menu items is styled with inline-block and placed in a row. If the window is so small that not all menu items can fit, they wrap into a second row, but is not shown, because of overflow hidden on the nav.</p>
+<p>But how is the menu button now magically shown? Remember that the last menu item, the menu button, is positioned with position absolute? It is positioned from the bottom of the ul tag, and moved upwards with the same height as the nav. The menu button is in other words moved when the height of the ul tag is changed. Since the items now are in two rows, the height of the ul tag is now twice of the original height. The menu button will therefore automatically move down one step (the height of the nav) into view.</p>
+<p>But, if the menu items occupy three or more rows, we need to prevent the menu button to move another step down out of view below the nav. This is solved by setting a max-height to the ul tag, with a value of double the height of the nav.</p>
+<p>The opening and closing of the menu is done with simple anchor links, and the use of the :target selector in css.</p>
+<p>So, a simple but effective technique using only CSS. Only downside is that you have to set an explicit height size on the nav, and this fixed height value has to be applied several times in the CSS.</p>

@@ -1,0 +1,59 @@
+{{/*  <div class="flex justify-start hover:bg-teal-700 bg-teal-200">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}"
+    class="no-underline block mt-4 sm:inline-block sm:mt-0 text-gray-700 hover:text-gray-500 mr-4">
+    {{ .Name }}
+    </a> 
+    {{ end }}
+</div>  */}}
+
+{{/*<!--*/}}
+{{/*<div class="container mx-auto p-10">*/}}
+{{/*    <nav class="flex-row md:justify-between">*/}}
+{{/*        <div class="flex flex-row justify-between">*/}}
+
+{{/*           <p id="hamburgerbtn" class="md:hidden bg-purple-800">*/}}
+{{/*             menu*/}}
+{{/*           </p>*/}}
+{{/*        </div>*/}}
+{{/*       */}}
+{{/*        <ul class="hidden md:flex md:flex-row" id="mobileMenu">*/}}
+{{/*            {{ $currentPage := . }}*/}}
+{{/*            {{ range .Site.Menus.main }}*/}}
+{{/*            <li class="pr-5 last:pr-0">*/}}
+{{/*                <a class="pb-1 hover:border-gray-700 border-b-2{{ if eq $currentPage.URL .URL }} border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}" href="{{ .URL }}">{{ .Name }}</a>*/}}
+{{/*            </li>*/}}
+{{/*            {{ end }}*/}}
+{{/*        </ul>*/}}
+{{/*    </nav>*/}}
+{{/*</div>*/}}
+{{/*<style>*/}}
+{{/*    .active{*/}}
+{{/*        display: block;*/}}
+{{/*    }    */}}
+{{/*</style>*/}}
+{{/*<script>*/}}
+{{/*    let hamburger = document.getElementById('hamburgerbtn');*/}}
+
+{{/*    let mobileMenu = document.getElementById('mobileMenu');*/}}
+
+{{/*    hamburger.addEventListener('click', function(){*/}}
+{{/*        mobileMenu.classList.toggle('active');*/}}
+{{/*    });*/}}
+{{/*</script>-->*/}}
+
+<div id="menu-wrapper" class="container mx-auto max-w-screen-xl pl-5 pr-5">
+    <nav id="menu">
+        <ul id="menu-closed">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li class="pr-5 last:pr-0">
+                <a class="pb-1 hover:border-gray-700 border-b-2{{ if eq $currentPage.URL .URL }} border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}"
+                   href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            <li><a href="#menu-closed">&#215; Close menu</a></li>
+            <li><a href="#menu">&#9776; Menu</a></li>
+        </ul>
+    </nav>
+</div>

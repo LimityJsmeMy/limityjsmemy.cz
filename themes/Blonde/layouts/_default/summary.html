@@ -1,0 +1,11 @@
+{{ if eq .Type "featured" }}
+{{ partial "components/card3" (dict "context" . "imgwidth" "50") }}
+{{ else }}
+{{ partial "components/card4" (dict "context" . "imgwidth" "50") }}
+{{ end }}
+
+{{/* {{ with .Params.image }}
+    {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+    {{ $resized := $imageResource.Fill "200x200" }}
+    <img src="{{ $resized.RelPermalink }}" />
+{{ end }} */}}
