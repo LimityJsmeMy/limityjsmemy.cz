@@ -1,0 +1,6 @@
+# Dependency management
+node_modules/
+
+# Local development environment
+.idea/
+*.code-workspace
