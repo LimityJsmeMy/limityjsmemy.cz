@@ -5,11 +5,8 @@
         <a class="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500" href="#">Akce</a>
     </div>
     <div class="mt-2">
-        <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">Accessibility tools for designers and
-            developers</a>
-        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta
-            totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis
-            facere in modi ratione libero!</p>
+        <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">{{ .context.Title }}</a>
+        <p class="mt-2 text-gray-600">{{ substr .context.Summary 0 240 | plainify }}...</p>
     </div>
     <div class="flex justify-end items-right mt-4">
         <a class="text-blue-600 hover:underline" href="#">Přečíst si víc ></a>
