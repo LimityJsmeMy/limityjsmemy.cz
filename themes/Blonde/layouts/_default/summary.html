@@ -1,5 +1,7 @@
 {{ if eq .Type "featured" }}
 {{ partial "components/card_featured" (dict "context" . "imgwidth" "50") }}
+{{ else if eq .Type "event" }}
+{{ partial "components/card_event" (dict "context" .) }}
 {{ else }}
 {{ partial "components/card_article_homepage" (dict "context" . "imgwidth" "50") }}
 {{ end }}

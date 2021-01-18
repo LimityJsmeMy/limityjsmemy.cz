@@ -1,5 +1,7 @@
-<footer class="bg-gray-800 text-white p-6">
-    {{ if .Site.Menus.foot }}
+{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "footer.png" ) }}
+{{/*{{ $resized_regular := $imageResource.Fill "600x600" }}*/}}
+<footer class="bg-gray-800 text-black font-bold p-6 h-36" style="background-image: url({{ $imageResource.RelPermalink}}); background-size: 100%; background-position: center; mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));">
+<!--    {{ if .Site.Menus.foot }}
     <div class="flex justify-center w-full md:flex md:flex-row sm:items-center sm:w-auto mb-4">
         <div>
             {{ range .Site.Menus.foot }}
@@ -15,5 +17,5 @@
         <p>&copy; <a href="{{ .Site.BaseURL }}" class="hover:text-gray-500">{{ .Site.Title }}</a> {{ now.Year }}</p>
         <p>Powered by <a href="https://gohugo.io/" class="hover:text-gray-500">Hugo</a>, Theme <a
                 href="https://github.com/opera7133/Blonde" class="hover:text-gray-500">Blonde</a>.</p>
-    </div>
+    </div>-->
 </footer>

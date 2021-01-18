@@ -1,0 +1,16 @@
+{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
+<div class="teaser-wrapper p-0.5 mb-4 rounded-md" style="background-image: url({{ $imageResource.RelPermalink}});">
+  <div class="w-full bg-white p-6 flex flex-col">
+    <!--  <div class="w-full text-gray-500 font-thin">
+        Livewire
+      </div>-->
+    <div class="w-full text-gray-600 font-bold text-lg">
+      <a href="{{ .context.RelPermalink}}" class="hover:text-gray-800 transition duration-150 border-b-4 border-gray-600">
+        {{ .context.Title }}
+      </a>
+    </div>
+    <div class="w-full flex justify-between text-gray-600 mt-2">
+      <div>{{.context.Date.Format "2.1. 2006"}}</div>
+    </div>
+  </div>
+</div>

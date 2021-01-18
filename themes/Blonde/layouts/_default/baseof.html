@@ -11,6 +11,8 @@
         </div>
         {{- partial "footer.html" . -}}
     </div>
+    {{ $js := resources.Get "js/index.js" -}}
+    <script src="{{ $js.Permalink }}" defer></script>
 </body>
 
 </html>
