@@ -40,6 +40,8 @@ body {
 
 #menu-wrapper nav a svg {
   display: inline;
+  margin-right: 0.3em;
+  margin-bottom: 0.1em;
 }
 
 #menu-wrapper nav a:hover {
