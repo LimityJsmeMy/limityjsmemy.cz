@@ -9,14 +9,16 @@
   </div>
   <div class="grid grid-cols-3 gap-8">
     <div class="col-span-3 lg:col-span-2 mb-3">
-      {{ partial "newsletter_signup_card" . }}
       {{if .IsHome}}
       {{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) (.Site.Params.paginator_pages) )}}
       {{else}}
       {{.Scratch.Set "Paginator" .Paginator}}
       {{end}}
       {{$paginator:=(.Scratch.Get "Paginator")}}
-      {{ range $paginator.Pages }}
+      {{ range $index, $element := $paginator.Pages }}
+      {{ if eq $index 2 }}
+      {{ partial "newsletter_signup_card" . }}
+      {{ end }}
       {{/* <a href="{{.RelPermalink}}"> */}}
       {{ .Render "summary" }}
       {{/* </a> */}}

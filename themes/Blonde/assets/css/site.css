@@ -38,6 +38,10 @@ body {
   height: 44px; /* Menu height */
 }
 
+#menu-wrapper nav a svg {
+  display: inline;
+}
+
 #menu-wrapper nav a:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }

@@ -5,7 +5,7 @@
             {{ range .Site.Menus.main }}
             <li class="pr-5 last:pr-0">
                 <a class="pb-1 hover:border-gray-700 border-b-2{{ if eq $currentPage.URL .URL }} border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}"
-                   href="{{ .URL }}">{{ .Name }}</a>
+                   href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
             </li>
             {{ end }}
             <li><a href="#menu-closed">&#215; Close menu</a></li>
