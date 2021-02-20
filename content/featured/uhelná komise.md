@@ -1,7 +1,7 @@
 ---
 author: "Wamo"
 title: "Uhelná komise!"
-image: "klimakemp.jpg"
+bgimage: "klimakemp.jpg"
 draft: false
 date: 2020-08-14
 description: "Image Test"

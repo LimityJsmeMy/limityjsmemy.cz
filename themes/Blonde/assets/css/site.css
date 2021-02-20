@@ -99,3 +99,39 @@ body {
   margin: 0;
   border-left: 2px solid rgb(19, 51, 61);
 }
+
+.teaser-wrapper, .featured-wrapper {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ff8400' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.header-button-wrapper {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ff8400' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.teaser-wrapper a.title {
+  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ff8400' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  border-image-width: 20;
+}
+
+svg.svgtext {
+  height: 2em;
+  width: 100%;
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'screentyperegular', Georgia, "Times New Roman", Times, serif;
+}
+
+#text {
+  fill: url(#sanbornHatch);
+  stroke: #ff8400;
+  stroke-width: 1;
+}
+
+a.readmore-link {
+  margin-bottom: 2px;
+}
+
+a.readmore-link:hover {
+  margin-bottom: 0px;
+}

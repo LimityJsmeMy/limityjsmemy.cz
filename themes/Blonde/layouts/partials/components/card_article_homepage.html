@@ -1,18 +1,18 @@
 <!-- component -->
-{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
-<div class="teaser-wrapper p-0.5 mb-8 rounded-md max-w-4xl mx-auto" style="background-image: url({{ $imageResource.RelPermalink}});">
+{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile_orange.png" ) }}
+<div class="teaser-wrapper p-0.5 mb-8 rounded-md max-w-4xl mx-auto">
   <div class="px-10 py-6 bg-white border-gray-100 shadow-sm" style="transform: rotate(-0.2deg);">
     <div class="flex justify-between items-center">
-      <span class="font-light text-gray-600">{{.context.Date.Format "2.1. 2006"}}</span>
+      <span class="font-light text-sm text-gray-400">{{.context.Date.Format "2.1. 2006"}}</span>
       <a class="px-2 py-1 bg-gray-300 text-gray-100 font-bold rounded hover:bg-gray-600" href="#">Akce</a>
     </div>
     <div class="mt-2">
-      <a class="text-2xl text-gray-600 font-bold hover:text-gray-800 border-b-4 border-gray-600 hover:border-gray-600"
+      <a class="title text-2xl text-ljm-orange font-bold hover:text-ljm-orange-hover"
          href="{{ .context.RelPermalink}}">{{ .context.Title }}</a>
-      <p class="mt-4 text-gray-600">{{ substr .context.Summary 0 240 | plainify }}...</p>
+      <p class="mt-4 text-gray-500">{{ substr .context.Summary 0 240 | plainify }}...</p>
     </div>
     <div class="flex justify-end items-right mt-4">
-      <a class="text-gray-600 hover:text-gray-800 uppercase border-b-4 border-gray-600 hover:border-gray-800" href="#">Přečíst si víc</a>
+      <a class="readmore-link text-gray-400 hover:text-gray-600 uppercase pb-0.5 border-b-2 hover:border-b-4 border-opacity-60 border-ljm-orange hover:border-ljm-orange-hover" href="{{ .context.RelPermalink}}" style="">Přečíst si víc</a>
     </div>
   </div>
 </div>

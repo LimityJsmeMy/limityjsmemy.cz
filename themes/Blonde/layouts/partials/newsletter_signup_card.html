@@ -1,6 +1,6 @@
 {{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
 <a name="newsletter-box"></a>
-<div class="mb-6 mt-6 py-8 px-4 rounded" style="background-color: rgb(0, 0, 0); opacity: 0.65; background-image: url({{ .Site.BaseURL }}/images/at.svg); background-repeat: no-repeat; background-position: bottom right; background-size: 39%;">
+<div class="mb-6 mt-6 py-8 px-4 rounded" style="background-color: rgb(0, 0, 0); opacity: 0.50; background-image: url({{ .Site.BaseURL }}/images/at.svg); background-repeat: no-repeat; background-position: bottom right; background-size: 39%;">
   <div class="flex flex-row flex-wrap items-center">
     <div class="subscription-description mr-4">
       <h2 class="text-xl text-left inline-block font-semibold text-gray-100">Odebírej náš newsletter!</h2>
@@ -13,7 +13,7 @@
           <input type="email"
                                    class="rounded-md w-full pl-1.5 py-1 bg-gray-100 shadow-inner border border-gray-400 focus:outline-none"
                                    required></div>
-        <button class="bg-gray-400 text-gray-900 hover:bg-gray-100 hover:text-black font-semibold mt-3 px-5 py-1 rounded shadow float-right">Přihlásit se
+        <button class="bg-gray-600 text-gray-200 hover:text-white font-semibold mt-3 px-5 py-1 rounded shadow float-right hover:ring-4 hover:ring-ljm-orange hover:ring-opacity-20">Přihlásit se
         </button>
       </div>
     </form>

@@ -1,11 +1,27 @@
-module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+/*module.exports = {
   theme: {
-    extend: {},
+    extend: {}
+  },
+  variants: {},
+  plugins: []
+}*/
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'ljm-green': '#6cac44',
+        'ljm-green-hover': '#568636',
+        'ljm-orange': '#ff8400',
+        'ljm-orange-hover': '#c86400'
+      }
+    }
   },
   variants: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      ringColor: ['hover'],
+      ringWidth: ['hover'],
+      ringOpacity: ['hover'],
+      borderWidth: ['hover'],
+    }
+  }
 }
