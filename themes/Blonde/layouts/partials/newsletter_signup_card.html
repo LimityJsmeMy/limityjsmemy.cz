@@ -1,4 +1,4 @@
-{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
+{{ $imageResource := ($.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
 <a name="newsletter-box"></a>
 <div class="mb-6 mt-6 py-8 px-4 rounded" style="background-color: rgb(0, 0, 0); opacity: 0.50; background-image: url({{ .Site.BaseURL }}/images/at.svg); background-repeat: no-repeat; background-position: bottom right; background-size: 39%;">
   <div class="flex flex-row flex-wrap items-center">

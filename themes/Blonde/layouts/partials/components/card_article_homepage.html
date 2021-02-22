@@ -1,5 +1,5 @@
 <!-- component -->
-{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile_orange.png" ) }}
+{{ $imageResource := ($.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile_orange.png" ) }}
 <div class="teaser-wrapper p-0.5 mb-8 rounded-md max-w-4xl mx-auto">
   <div class="px-10 py-6 bg-white border-gray-100 shadow-sm" style="transform: rotate(-0.2deg);">
     <div class="flex justify-between items-center">

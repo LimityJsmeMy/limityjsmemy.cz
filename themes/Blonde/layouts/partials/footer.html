@@ -1,4 +1,4 @@
-{{ $imageResource := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "footer.png" ) }}
+{{ $imageResource := ($.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "footer.png" ) }}
 {{/*{{ $resized_regular := $imageResource.Fill "600x600" }}*/}}
 <footer class="bg-gray-800 text-black font-bold p-6 h-36" style="background-image: url({{ $imageResource.RelPermalink}}); background-size: 100%; background-position: center; mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));">
 <!--    {{ if .Site.Menus.foot }}

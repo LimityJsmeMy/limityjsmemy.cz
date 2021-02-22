@@ -2,7 +2,7 @@ baseURL = "https://limityjsmemy.github.io/ljmtailwind"
 title = "Blonde"
 author = "wamo"
 languageCode = "en"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "cs"
 enableInlineShortcodes = true
 theme = "Blonde"
 enableRobotsTXT = true
@@ -18,11 +18,28 @@ buildFuture = true
 #disqusShortname = ""
 
 [params]
+featuredBackground = "jiretin.jpg"
 # The number of articles to be displayed on a single page.
 paginator_pages = "5"
 
 # Enable this if you want the archive list to be in a drop-down format.
 archive_dropdown = "false"
+
+[languages.cs]
+contentDir = "content/czech"
+languageCode = "cs-cz"
+languageName = "Česky"
+weight = 1
+[languages.de]
+contentDir = "content/deutsch"
+languageCode = "de-de"
+languageName = "Deutsch"
+weight = 3
+[languages.en]
+contentDir = "content/english"
+languageCode = "en-us"
+languageName = "English"
+weight = 2
 
 [menu]
 

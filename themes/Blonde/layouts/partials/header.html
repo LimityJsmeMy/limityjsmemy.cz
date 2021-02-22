@@ -1,4 +1,5 @@
-<div class="header min-h-64 bg-cover" style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url('{{ .Site.BaseURL }}/uploads/dither_it_zewlakk.png'); background-size: cover; background-position: center center;">
+{{ $imageResource := ($.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "dither_it_zewlakk.png" ) }}
+<div class="header min-h-64 bg-cover" style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%), url({{ $imageResource.RelPermalink}}); background-size: cover; background-position: center center;">
     {{- partial "topbar.html" . -}}
     <div class="container md:h-52 mx-auto pl-5 pr-5 max-w-screen-xl flex flex-col md:flex-row justify-between">
         <div class="logo-wrapper h-full flex flex-col justify-center">
