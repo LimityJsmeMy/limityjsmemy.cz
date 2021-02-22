@@ -1,4 +1,4 @@
-{{ $imageResource := ($.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
+{{ $imageResource := ($.context.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" "tile.png" ) }}
 <div class="teaser-wrapper p-0.5 mb-4 rounded-md" style="background-image: url({{ $imageResource.RelPermalink}});">
   <div class="w-full bg-white p-6 flex flex-col">
     <!--  <div class="w-full text-gray-500 font-thin">
