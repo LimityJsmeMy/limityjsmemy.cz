@@ -1,0 +1,16 @@
+{{ $headerMenuMap := (dict "en-us" "header_en" "cs-cz" "header_cs" "de-de" "header_de") }}
+{{ range $lang_code, $menu_name := $headerMenuMap }}
+{{ if eq $.Site.Language.Params.LanguageCode $lang_code }}
+{{ $menu := index $.Site.Menus $menu_name }}
+{{ range $menu -}}
+{{ if eq .Identifier "primary"}}
+<a class="btn-header text-gray-200 bg-ljm-green hover:ring-ljm-orange hover:ring-opacity-20"
+   href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+{{if eq .Identifier "secondary"}}
+<a class="btn-header bg-gray-500 text-gray-200 hover:ring-ljm-orange hover:ring-opacity-20"
+   href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+{{ end -}}
+{{ end }}
+{{ end }}

@@ -1,7 +1,7 @@
 baseURL = "https://limityjsmemy.github.io/ljmtailwind"
 title = "Blonde"
 author = "wamo"
-languageCode = "en"
+languageCode = "cs"
 DefaultContentLanguage = "cs"
 enableInlineShortcodes = true
 theme = "Blonde"
@@ -85,6 +85,18 @@ identifier = "home"
 name = "Neues"
 url = "/"
 weight = 1
+
+[[menu.header_cs]]
+identifier = "primary"
+name = "Přidej se k nám"
+url = "/pridej-se/"
+weight = 1
+
+[[menu.header_cs]]
+identifier = "secondary"
+name = "Chci vědět víc"
+url = "/o-nas/"
+weight = 2
 
 [taxonomies]
 category = "categories"
