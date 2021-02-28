@@ -23,5 +23,8 @@ module.exports = {
       ringOpacity: ['hover'],
       borderWidth: ['hover'],
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

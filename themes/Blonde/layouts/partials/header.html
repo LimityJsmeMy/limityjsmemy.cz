@@ -3,8 +3,8 @@
     {{- partial "topbar.html" . -}}
     <div class="container md:h-52 mx-auto pl-5 pr-5 max-w-screen-xl flex flex-col md:flex-row justify-between">
         <div class="logo-wrapper h-full flex flex-col justify-center">
-            <img class="mt-4 mb-4 h-28" style=""
-                                        alt="Logo Limity jsme My" src="{{ .Site.BaseURL }}/images/logo.svg"></div>
+          <a href="{{ "/" | relLangURL }}"><img class="mt-4 mb-4 h-28" style=""
+                            alt="Logo Limity jsme My" src="{{ .Site.BaseURL }}/images/logo.svg"></a></div>
         <div class="mt-4 mb-4 text-center md:text-left flex flex-col flex-wrap md:items-end items-center">
             <p class="ml-2 mr-2 max-w-sm text-white font-bold">{{ i18n "header_slogan" | safeHTML }}</p>
             <div class="mx-auto md:mx-0 flex flex-wrap justify-around mt-8 font-bold content-between">
