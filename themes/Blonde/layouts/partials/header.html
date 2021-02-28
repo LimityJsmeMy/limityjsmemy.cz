@@ -6,7 +6,7 @@
             <img class="mt-4 mb-4 h-28" style=""
                                         alt="Logo Limity jsme My" src="{{ .Site.BaseURL }}/images/logo.svg"></div>
         <div class="mt-4 mb-4 text-center md:text-left flex flex-col flex-wrap md:items-end items-center">
-            <p class="ml-2 mr-2 max-w-sm text-white font-bold">Jsme hnutí usilující o ukončení těžby a spalování fosilních paliv. Naším cílem je klimatická spravedlnost.</p>
+            <p class="ml-2 mr-2 max-w-sm text-white font-bold">{{ i18n "header_slogan" | safeHTML }}</p>
             <div class="mx-auto md:mx-0 flex flex-wrap justify-around mt-8 font-bold content-between">
               {{ partial "header_action_links.html" . }}
             </div>
