@@ -1,15 +1,22 @@
 <div id="menu-wrapper" class="container mx-auto max-w-screen-xl pl-5 pr-5">
-    <nav id="menu">
-        <ul id="menu-closed">
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-            <li class="pr-5 last:pr-0">
-                <a class="pb-1 hover:border-gray-700 border-b-2{{ if eq $currentPage.URL .URL }} border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}"
-                   href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
-            </li>
-            {{ end }}
-            <li><a href="#menu-closed">&#215; Close menu</a></li>
-            <li><a href="#menu">&#9776; Menu</a></li>
-        </ul>
-    </nav>
+  <nav id="menu">
+    <ul id="menu-closed">
+    {{ $mainMenuMap := (dict "en-us" "main_en" "cs-cz" "main_cs" "de-de" "main_de") }}
+    {{ $currentPage := . }}
+    {{ range $lang_code, $menu_name := $mainMenuMap }}
+      {{ range index $.Site.Menus $menu_name }}
+        {{ if eq $.Site.Language.Params.LanguageCode $lang_code }}
+        {{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+        {{ $active = or $active (eq $.Section (lower .Name)) }}
+        <li class="pr-5 last:pr-0">
+          <a class="pb-1 hover:border-gray-700 border-b-2{{ if $active}} active border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}"
+           href="{{ .URL | absLangURL }}">{{ .Pre }} {{ .Name }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+      <li><a href="#menu-closed">&#215; Close menu</a></li>
+      <li><a href="#menu">&#9776; Menu</a></li>
+    </ul>
+  </nav>
 </div>

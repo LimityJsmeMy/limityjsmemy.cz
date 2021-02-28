@@ -6,3 +6,7 @@
 @import "node_modules/tailwindcss/utilities";
 /* Site Specific */
 @import "assets/css/site";
+
+.btn-header {
+  @apply text-xl rounded-md px-4 py-2 m-2 transition duration-500 ease-linear select-none hover:ring-4 hover:text-white
+}

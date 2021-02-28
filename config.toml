@@ -30,49 +30,61 @@ contentDir = "content/czech"
 languageCode = "cs-cz"
 languageName = "Česky"
 weight = 1
+
 [languages.de]
 contentDir = "content/deutsch"
 languageCode = "de-de"
 languageName = "Deutsch"
 weight = 3
+
 [languages.en]
 contentDir = "content/english"
 languageCode = "en-us"
 languageName = "English"
 weight = 2
 
-[menu]
+[[menu.main_cs]]
+identifier = "home"
+name = "Úvodem"
+url = "/"
+weight = 1
 
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
+[[menu.main_cs]]
+identifier = "about"
+name = "O nás"
+url = "/about/"
+weight = 2
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 2
+[[menu.main_cs]]
+identifier = "contact"
+name = "Kontakt"
+url = "/contact/"
+weight = 3
 
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 3
+[[menu.main_cs]]
+identifier = "klimakemp2021"
+name = "Klimakemp 2021"
+url = "/contact/"
+weight = 3
 
-  [[menu.main]]
-    identifier = "klimakemp2021"
-    name = "Klimakemp 2021"
-    url = "/contact/"
-    weight = 3
+[[menu.main_cs]]
+identifier = "newsletter"
+name = "Odebírej náš newsletter"
+url = "/#newsletter-box"
+pre = "<svg xmlns = 'http://www.w3.org/2000/svg' width = '20' height = '20' viewBox = '0 0 24 24' fill = 'none' stroke = '#000000' stroke-width= '2' stroke-linecap = 'round' stroke-linejoin = 'round'><path d = 'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'></path><polyline points = '22,6 12,13 2,6'></polyline></svg>"
+weight = 3
 
-  [[menu.main]]
-    identifier = "newsletter"
-    name = "Odebírej náš newsletter"
-    url = "/#newsletter-box"
-    pre = "<svg xmlns = 'http://www.w3.org/2000/svg' width = '20' height = '20' viewBox = '0 0 24 24' fill = 'none' stroke = '#000000' stroke-width= '2' stroke-linecap = 'round' stroke-linejoin = 'round'><path d = 'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'></path><polyline points = '22,6 12,13 2,6'></polyline></svg>"
-    weight = 3
+[[menu.main_en]]
+identifier = "home"
+name = "News"
+url = "/"
+weight = 1
+
+[[menu.main_de]]
+identifier = "home"
+name = "Neues"
+url = "/"
+weight = 1
 
 [taxonomies]
 category = "categories"
