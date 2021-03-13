@@ -1,0 +1,47 @@
+---
+label: Post
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    min: 3
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: D.M. YYYY
+    time_format: 
+    display_utc: false
+  default: now
+- name: image
+  type: file
+  config:
+    maxSize: 5
+  label: Image
+- name: publishdate
+  type: datetime
+  label: Datum a čas zveřejnění
+  description: Před nastaveným časem nebude obsah zveřejněn. Pokud není nastaven,  příspěvek
+    se zveřejní okamžitě.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: expirydate
+  type: datetime
+  label: Datum a čas odstranění
+  description: V zadaný čas dojde k odstranění obsahu z webu (v editoru zůstane).
+    Pokud není nastaveno, příspěvek se bude zobrazovat trvale.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+pages:
+- content/czech/posts/priklad-clanku.md

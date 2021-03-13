@@ -1,0 +1,121 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: "/static/admin"
+webhook_url: 
+sections:
+- type: heading
+  label: Czech
+- type: directory
+  path: content/czech
+  label: Pages - CZ
+  create: documents
+  match: "*"
+- type: directory
+  path: content/czech/post
+  label: Posts - CZ
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: content/czech/event
+  label: Events - CZ
+  create: all
+  match: "**/*"
+  templates:
+  - event
+- type: directory
+  path: content/czech/featured
+  label: Featured - CZ
+  create: all
+  match: "**/*"
+  templates:
+  - featured
+- type: heading
+  label: English
+- type: directory
+  path: content/english
+  label: Pages - EN
+  create: documents
+  match: "*"
+- type: directory
+  path: content/english/post
+  label: Posts - EN
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: content/english/event
+  label: Events - EN
+  create: all
+  match: "**/*"
+  templates:
+  - event
+- type: directory
+  path: content/english/featured
+  label: Featured - EN
+  create: all
+  match: "**/*"
+  templates:
+  - featured
+- type: heading
+  label: Deutsch
+- type: directory
+  path: content/deutsch
+  label: Pages - DE
+  create: all
+  match: "*"
+  templates:
+  - page
+- type: directory
+  path: content/deutsch/post
+  label: Posts - DE
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: content/deutsch/event
+  label: Events - DE
+  create: all
+  match: "**/*"
+  templates:
+  - event
+- type: directory
+  path: content/deutsch/featured
+  label: Featured - DE
+  create: all
+  match: "**/*"
+  templates:
+  - featured
+- type: heading
+  label: Navigation
+- type: directory
+  path: data
+  label: Data
+  create: documents
+  match: "**/*"
+#- type: document
+#  path: data/social_links/social-links.yml
+#  label: Social links
+#- type: document
+#  path: data/side_header_links/site-header-links.yml
+#  label: Site header links
+upload_dir: content/czech/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.69.0
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.81.0
