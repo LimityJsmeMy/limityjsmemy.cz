@@ -1,6 +1,0 @@
-- name: facebook
-  icon_path: "/icons/facebook.svg"
-  url: "https://facebook.com"
-- name: twitter
-  icon_path: "/icons/twitter.svg"
-  url: "https://twitter.com"

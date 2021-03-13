@@ -1,13 +1,10 @@
 <div class="topbar w-full text-white flex items justify-between pt-2 pb-2 pl-5 pr-5 border-b max-w-screen-xl mx-auto" style="border-bottom-color: rgba(234, 234, 234, 0.3)">
-    {{ with $.Site.Data.social_links }}
-    <ul class="flex" style="align-content: center;">
-        {{ range . }}
-        <li class=" ml-1 mr-1"><a href="{{ .url | relURL }}"><img class="w-6 h-6" style="filter: invert(0.9);"
-                                                                  src="{{ .icon_path | relURL }}"
-                                                                  alt=" {{ .name | title}} logo"></a></li>
-        {{ end }}
-    </ul>
-    {{ end }}
+<ul class="flex" style="align-content: center;">
+{{ range $.Site.Menus.social_links}}
+  <li class=" ml-1 mr-1"><a href="{{ .URL | absURL }}"><img class="w-6 h-6" style="filter: invert(0.9);"
+                                                            src="{{ with .Params.icon_path }}{{ . | relURL }}{{ end }}" alt=" {{ .Identifier | title}} logo"></a></li>
+{{ end }}
+</ul>
     <div class="topbar-right flex">
         <div class="search mr-5 pt-1">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"

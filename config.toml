@@ -98,6 +98,18 @@ name = "Chci vědět víc"
 url = "/o-nas/"
 weight = 2
 
+[[menu.social_links]]
+identifier = "facebook"
+url = "https://facebook.com"
+[menu.social_links.params]
+icon_path = "/icons/facebook.svg"
+
+[[menu.social_links]]
+identifier = "twitter"
+url = "https://twitter.com"
+[menu.social_links.params]
+icon_path = "/icons/twitter.svg"
+
 [taxonomies]
 category = "categories"
 tag = "tags"
