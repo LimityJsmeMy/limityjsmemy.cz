@@ -23,3 +23,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/czech/about.md
