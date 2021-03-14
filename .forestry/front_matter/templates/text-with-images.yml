@@ -2,6 +2,11 @@
 label: Text with images
 hide_body: false
 fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Nadpis
 - name: text
   type: textarea
   default: ''
