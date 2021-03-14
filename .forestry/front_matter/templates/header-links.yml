@@ -38,3 +38,4 @@ fields:
     description: Kam má tlačítko ukazovat?
 pages:
 - data/header_links_cs.yml
+- data/header_links_de.yml
