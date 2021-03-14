@@ -1,0 +1,17 @@
+---
+label: Social links
+hide_body: true
+fields:
+- type: field_group_list
+  name: Social links
+  label: Social links
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: file
+    name: icon_path
+    label: icon_path
+  - type: text
+    name: url
+    label: url
