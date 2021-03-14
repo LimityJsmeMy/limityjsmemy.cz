@@ -20,3 +20,18 @@ fields:
   type: image_gallery
   config: {}
   label: Obrázky
+- name: images_floating
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - vlevo
+    - vpravo
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Umístění obrázků
+  description: Kde se budou zobrazovat obrázky na desktopu.
