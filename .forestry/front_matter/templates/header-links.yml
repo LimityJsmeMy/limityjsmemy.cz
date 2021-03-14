@@ -1,0 +1,17 @@
+---
+label: Header links
+hide_body: true
+fields:
+- type: field_group_list
+  name: Header links cs
+  label: Header links cs
+  fields:
+  - type: text
+    name: name
+    label: Button text
+  - type: text
+    name: style
+    label: style
+  - type: text
+    name: url
+    label: url
