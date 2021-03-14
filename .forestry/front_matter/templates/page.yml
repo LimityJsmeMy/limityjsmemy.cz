@@ -15,3 +15,11 @@ fields:
   label: Translation key
   description: Helps to link language versions of the page (such as O nás-About-Uber
     uns)
+- name: sections
+  type: blocks
+  label: Sekce
+  template_types:
+  - text-with-images
+  config:
+    min: 
+    max: 
