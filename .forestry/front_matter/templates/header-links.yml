@@ -23,9 +23,16 @@ fields:
         file: 
         path: 
     label: Button style
-  - type: text
-    name: url
-    label: URL
-    description: Adresa profilu
+  - name: url
+    type: select
+    default: []
     config:
       required: true
+      options: []
+      source:
+        type: pages
+        section: ''
+        file: 
+        path: 
+    label: Stránka
+    description: Kam má tlačítko ukazovat?
