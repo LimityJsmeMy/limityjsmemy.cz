@@ -39,3 +39,4 @@ fields:
 pages:
 - data/header_links_cs.yml
 - data/header_links_de.yml
+- data/header_links_en.yml
