@@ -1,6 +1,10 @@
+---
+- name: dfdf
+  icon_path: "/dfsdf.svg"
+  url: http://google.com
 - name: facebook
   icon_path: "/icons/facebook.svg"
-  url: "https://facebook.com"
+  url: https://facebook.com
 - name: twitter
   icon_path: "/icons/twitter.svg"
-  url: "https://twitter.com"
+  url: https://twitter.com
