@@ -9,9 +9,23 @@ fields:
   - type: text
     name: name
     label: Button text
-  - type: text
-    name: style
-    label: style
+  - name: style
+    type: select
+    default: []
+    config:
+      required: true
+      options:
+      - primary
+      - secondary
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Button style
   - type: text
     name: url
-    label: url
+    label: URL
+    description: Adresa profilu
+    config:
+      required: true
