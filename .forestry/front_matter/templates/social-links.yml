@@ -8,10 +8,19 @@ fields:
   fields:
   - type: text
     name: name
-    label: name
-  - type: file
-    name: icon_path
-    label: icon_path
+    label: Název sociální sítě
+    config:
+      required: true
+  - name: icon_path
+    type: text
+    config:
+      required: false
+    label: Icon path
+    description: Cesta k ikoně ve formátu SVG v adresáři static. Ikonu je potřeba
+      přidat ručně.
   - type: text
     name: url
-    label: url
+    label: URL
+    description: Adresa profilu na sociální síti
+    config:
+      required: true
