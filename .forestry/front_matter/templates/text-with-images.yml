@@ -1,4 +1,17 @@
 ---
 label: Text with images
 hide_body: false
-fields: []
+fields:
+- name: text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Text
+- name: images
+  type: image_gallery
+  config: {}
+  label: Obrázky
