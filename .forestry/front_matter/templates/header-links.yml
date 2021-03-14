@@ -36,3 +36,5 @@ fields:
         path: 
     label: Stránka
     description: Kam má tlačítko ukazovat?
+pages:
+- data/header_links_cs.yml

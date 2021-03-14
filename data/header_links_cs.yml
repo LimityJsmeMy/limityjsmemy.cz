@@ -1,6 +1,7 @@
-- name: "Přidej se k nám"
-  style: "primary"
+---
+- name: Přidej se k nám
+  style: primary
   url: "/pridej-se/"
-- name: "Chci vědět víc"
-  style: "secondary"
+- name: Chci vědět víc
+  style: secondary
   url: "/o-nas/"
