@@ -97,8 +97,6 @@ sections:
   label: Data
   create: documents
   match: "**/*"
-  templates:
-  - header-links
 upload_dir: content/czech/uploads
 public_path: "/uploads"
 front_matter_path: ''
