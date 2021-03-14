@@ -1,7 +1,4 @@
 ---
-- name: dfdf
-  icon_path: "/dfsdf.svg"
-  url: http://google.com
 - name: facebook
   icon_path: "/icons/facebook.svg"
   url: https://facebook.com
