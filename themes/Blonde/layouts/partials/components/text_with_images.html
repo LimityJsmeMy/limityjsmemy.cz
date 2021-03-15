@@ -1,20 +1,23 @@
 <div class="grid grid-cols-3 gap-8 my-4">
 <div class="col-span-3 lg:col-span-2 px-2 pl-9">
-  <h2>{{ .heading }}</h2>
+  <h2>{{ .context.heading }}</h2>
+
 </div>
 </div>
 <div class="grid grid-cols-3 gap-8 my-4">
   <div class="col-span-3 lg:col-span-2 px-2 pl-9">
   <div class="">
-    <div class="" style="columns: 300px 2; column-gap: 2rem;">{{.text}}</div>
+    <div class="" style="columns: 300px 2; column-gap: 2rem;">{{.context.text}}</div>
 {{/*    <div class="images flex flex-col flex-wrap">*/}}
 
 {{/*    </div>*/}}
     </div>
 </div>
   <div class="col-span-3 lg:col-span-1 px-2 pl-9 lg:pr-9">
-  {{ range .images }}
-  <img class="pb-4" src="{{$.Site.BaseURL}}{{ . }}" alt="Image">
+  {{ range .context.images }}
+    {{ $image := ($.dot.Sites.First.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+    {{ $resized_image := $image.Fill "500x500" }}
+  <img class="pb-4" src="{{ $resized_image.RelPermalink }}" alt="Image">
   {{ end }}
 </div>
 </div>

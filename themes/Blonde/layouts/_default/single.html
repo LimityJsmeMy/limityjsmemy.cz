@@ -9,7 +9,7 @@
 </div>
     {{ range .Params.sections }}
     {{ if eq "text-with-images" .template }}
-    {{ partial "components/text_with_images" . }}
+    {{ partial "components/text_with_images" (dict "context" . "dot" $) }}
     {{ end }}
     {{/*  {{ if eq "call-to-action" .template }}*/}}
     {{/*  {{ partial "blocks/cta" . }}*/}}
