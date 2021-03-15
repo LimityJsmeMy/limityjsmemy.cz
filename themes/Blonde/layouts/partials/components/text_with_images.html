@@ -14,7 +14,7 @@
 </div>
   <div class="col-span-3 lg:col-span-1 px-2 pl-9 lg:pr-9">
   {{ range .images }}
-  <img class="pb-4" src="{{ . | absURL }}" alt="Image">
+  <img class="pb-4" src="{{$.Site.BaseURL}}{{ . }}" alt="Image">
   {{ end }}
 </div>
 </div>
