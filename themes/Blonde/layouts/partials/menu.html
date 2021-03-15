@@ -10,7 +10,7 @@
         {{ $active = or $active (eq $.Section (lower .Name)) }}
         <li class="pr-5 last:pr-0">
           <a class="pb-1 hover:border-gray-700 border-b-2{{ if $active}} active border-gray-900 border-b-4 hover:border-gray-900 hover:border-b-4{{ end }}"
-           href="{{$.Site.BaseURL}}{{ .URL | relLangURL }}">{{ .Pre }} {{ .Name }}</a>
+           href="{{ .URL | absLangURL }}">{{ .Pre }} {{ .Name }}</a>
         </li>
         {{ end }}
       {{ end }}
