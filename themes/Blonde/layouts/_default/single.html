@@ -1,10 +1,19 @@
 {{ define "header_css" }}{{ end }}
 
 {{ define "main" }}
-<div class="grid grid-cols-3 gap-4">
-    <div class="col-span-3 lg:col-span-2 px-2 pl-9 prose prose-sm">
-        <h1 class="title text-4xl">{{.Title}}</h1>
-        <div class="content py-1">{{.Content}}</div>
-    </div>
+<div class="pl-5 pr-5">
+<div class="grid grid-cols-3 gap-8">
+  <div class="col-span-3 lg:col-span-2 px-2 pl-9 ">
+    <h1 class="title text-4xl">{{.Title}}</h1>
+  </div>
+</div>
+    {{ range .Params.sections }}
+    {{ if eq "text-with-images" .template }}
+    {{ partial "components/text_with_images" . }}
+    {{ end }}
+    {{/*  {{ if eq "call-to-action" .template }}*/}}
+    {{/*  {{ partial "blocks/cta" . }}*/}}
+    {{/*  {{ end }}*/}}
+    {{ end }}
 </div>
 {{ end }}
