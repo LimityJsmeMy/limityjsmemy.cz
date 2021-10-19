@@ -1,6 +1,5 @@
 +++
 date = 2021-10-20T20:15:28Z
-draft = true
 expirydate = ""
 image = "/uploads/historie2015b.jpg"
 publishdate = ""
